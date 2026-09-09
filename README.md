@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=200&section=header&text=Waskitho%20Cito%20Adiwiguno&fontSize=42&fontColor=ffffff&animation=fadeIn&desc=ML%20%2B%20Explainable%20AI%20Enthusiast&descSize=18&descAlignY=68" width="100%" alt="header" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=200&section=header&text=Waskitho%20Cito%20Adiwiguno&fontSize=42&fontColor=ffffff&animation=fadeIn&desc=ML%20%2B%20Explainable%20AI%20Enthusiast&descSize=18&descAlignY=55" width="100%" alt="header" />
 
 <!-- Typing animation -->
 <a href="https://github.com/WaskithoCitoAdiwiguno">
