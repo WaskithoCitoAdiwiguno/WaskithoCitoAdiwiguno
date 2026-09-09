@@ -73,7 +73,7 @@ Modular AI-based stock trading simulation system with 6 modules: data layer (SQL
 </td>
 <td width="50%" valign="top">
 
-### 🧠 JANAPATI — Explainable HR Intelligence
+### 🧠 Explainable HR Intelligence
 Employee attrition prediction & prescription framework combining **SHAP** for explainability and an **LLM (Llama 3.3-70B via Groq)** for automated HR narratives. Percentile-based risk tiering, model calibration to counter overconfidence bias.
 
 `Python` `SHAP` `Scikit-learn` `Groq API` `Streamlit`
