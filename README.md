@@ -102,6 +102,45 @@ Web dashboard system for monitoring DAMRI employee performance, with 4 core modu
 
 <br/>
 
+---
+
+## 📞 Contact
+
+- 📧 **Email:** [waskithocito.a@gmail.com](mailto:waskithocito.a@gmail.com)
+- 💼 **LinkedIn:** [Waskitho Adiwiguno](https://www.linkedin.com/in/waskitho-adiwiguno-736a05271/)
+- 📸 **Instagram:** [@waskitho___](https://instagram.com/waskitho___)
+
+## 📄 CV / Resume
+
+*CV/Resume section coming soon...*
+
+## 📚 Publications
+
+### Journals
+
+1. **Artificial Intelligence for Talent Classification in Digital Human Resource Management: A Systematic Literature Review**
+   - 📖 Published in: *Telematika* (E-ISSN: 2242-4528), SINTA 2 Accredited
+   - 🔗 [Link to publication](https://ejournal.amikompurwokerto.ac.id/index.php/telematika)
+   - 📄 Status: **Accepted (LoA received)** - August 2026
+   - 👥 Co-author: Roni Andarsyah
+
+2. **Illogical Analysis: The Reasons Why Implementation of Machine Learning (Case Study: R&D Analysis on Machine Learning Implementation in CV. Maju Sentosa)**
+   - 📖 Published in: *ILKOM Jurnal Ilmiah Teknkologi Komputer dan Informatika* (ISSN: 2541-0807)
+   - 🔗 [Link to publication](https://journal.fkom.uniku.ac.id/ilkom/article/view/343)
+   - 👥 Authors: Waskitho Cito Adiwiguno, Roni Andarsyah
+
+### Books
+
+3. **_ (Book Title)**
+   - 📖 Published via: Google Books
+   - 🔗 [Link to book](https://www.google.co.id/books/edition/_/HNzLEAAAQBAJ?hl=id&sa=X&ved=2ahUKEwiuuMeDtOKWAxUwwjgGHb7wDnoQre8FegQIChAE)
+
+## 🏅 Certifications
+
+*Certifications section coming soon...*
+
+---
+
 ## 📊 GitHub Stats
 
 <div align="center">
@@ -154,46 +193,4 @@ Web dashboard system for monitoring DAMRI employee performance, with 4 core modu
 
 <br/>
 
-<div align="center">
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=120&section=footer" width="100%" alt="footer" />
-
-</div>
-
----
-
-## 📞 Contact
-
-- 📧 **Email:** [waskithocito.a@gmail.com](mailto:waskithocito.a@gmail.com)
-- 💼 **LinkedIn:** [Waskitho Adiwiguno](https://www.linkedin.com/in/waskitho-adiwiguno-736a05271/)
-- 📸 **Instagram:** [@waskitho___](https://instagram.com/waskitho___)
-
-## 📄 CV / Resume
-
-*CV/Resume section coming soon...*
-
-## 📚 Publications
-
-### Journals
-
-1. **Artificial Intelligence for Talent Classification in Digital Human Resource Management: A Systematic Literature Review**
-   - 📖 Published in: *Telematika* (E-ISSN: 2242-4528), SINTA 2 Accredited
-   - 🔗 [Link to publication](https://ejournal.amikompurwokerto.ac.id/index.php/telematika)
-   - 📄 Status: **Accepted (LoA received)** - August 2026
-   - 👥 Co-author: Roni Andarsyah
-
-2. **Illogical Analysis: The Reasons Why Implementation of Machine Learning (Case Study: R&D Analysis on Machine Learning Implementation in CV. Maju Sentosa)**
-   - 📖 Published in: *ILKOM Jurnal Ilmiah Teknkologi Komputer dan Informatika* (ISSN: 2541-0807)
-   - 🔗 [Link to publication](https://journal.fkom.uniku.ac.id/ilkom/article/view/343)
-   - 👥 Authors: Waskitho Cito Adiwiguno, Roni Andarsyah
-
-### Books
-
-3. **_ (Book Title)**
-   - 📖 Published via: Google Books
-   - 🔗 [Link to book](https://www.google.co.id/books/edition/_/HNzLEAAAQBAJ?hl=id&sa=X&ved=2ahUKEwiuuMeDtOKWAxUwwjgGHb7wDnoQre8FegQIChAE)
-
-## 🏅 Certifications
-
-*Certifications section coming soon...*
 
