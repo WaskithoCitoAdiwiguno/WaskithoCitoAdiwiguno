@@ -4,7 +4,7 @@
 
 <!-- Typing animation -->
 <a href="https://github.com/WaskithoCitoAdiwiguno">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=600&lines=Halo%2C+saya+Waskitho+%F0%9F%91%8B;D4+Teknik+Informatika+%40+ULBI;ML+%2B+Explainable+AI+Enthusiast;Still+learning+but+getting+better." alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=600&lines=Hi%2C+I%27m+Waskitho+%F0%9F%91%8B;D4+Informatics+%40+ULBI;ML+%2B+Explainable+AI+Enthusiast;Still+learning+but+getting+better." alt="Typing SVG" />
 </a>
 
 <br/>
@@ -15,19 +15,19 @@
 
 <br/>
 
-[![Bahasa](https://img.shields.io/badge/%F0%9F%87%AE%F0%9F%87%A9_Bahasa_Indonesia-0d9488?style=for-the-badge)](README.md)
-[![Language](https://img.shields.io/badge/%F0%9F%87%AC%F0%9F%87%A7_English-58A6FF?style=for-the-badge)](README_EN.md)
+[![Bahasa](https://img.shields.io/badge/%F0%9F%87%AE%F0%9F%87%A9_Bahasa_Indonesia-58A6FF?style=for-the-badge)](https://github.com/WaskithoCitoAdiwiguno)
+[![Language](https://img.shields.io/badge/%F0%9F%87%AC%F0%9F%87%A7_English-0d9488?style=for-the-badge)](README_EN.md)
 
 </div>
 
-## 👨‍💻 Tentang Saya
+## 👨‍💻 About Me
 
-- 🎓 Mahasiswa D4 Teknik Informatika, **Universitas Logistik dan Bisnis Internasional (ULBI)** — School of Information Technology
-- 🔬 Fokus riset: **Explainable AI** (SHAP), **Fairness in ML** (AIF360), dan integrasi **LLM** untuk HR analytics
-- 🛠️ Membangun tools Python praktis — data pipeline, aplikasi desktop, sistem simulasi
-- 📄 Aktif publikasi di ekosistem jurnal **SINTA** (Indonesia)
-- 💼 Mengerjakan riset akademik, freelance data work, dan pengembangan ML terapan
-- 📫 Terbuka untuk kolaborasi seputar ML/AI, data science, dan automation
+- 🎓 D4 Informatics student, **Universitas Logistik dan Bisnis Internasional (ULBI)** — School of Information Technology
+- 🔬 Research focus: **Explainable AI** (SHAP), **Fairness in ML** (AIF360), and **LLM** integration for HR analytics
+- 🛠️ Building practical Python tools — data pipelines, desktop apps, simulation systems
+- 📄 Actively publishing in the **SINTA** journal ecosystem (Indonesia)
+- 💼 Working on academic research, freelance data work, and applied ML development
+- 📫 Open to collaboration on ML/AI, data science, and automation
 
 ## 🧰 Tech Stack
 
@@ -41,7 +41,7 @@
 ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
 ![Gradio](https://img.shields.io/badge/Gradio-F97316?style=for-the-badge&logo=gradio&logoColor=white)
 
-**🌐 Web & Aplikasi**
+**🌐 Web & Applications**
 
 ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
 ![CodeIgniter](https://img.shields.io/badge/CodeIgniter-EE4323?style=for-the-badge&logo=codeigniter&logoColor=white)
@@ -64,14 +64,14 @@
 
 </div>
 
-## 🚀 Proyek Unggulan
+## 🚀 Featured Projects
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
 ### 📈 ASM_AntonSahamManager
-Sistem simulasi trading saham berbasis AI, modular, dengan 6 modul: data layer (SQLite + yfinance), technical indicators (RSI/MACD/Bollinger/ATR), rule-based signal engine, risk manager berbasis ATR, paper trading simulator, dan dashboard Streamlit. Target pasar: IDX, US stocks, dan crypto.
+Modular AI-based stock trading simulation system with 6 modules: data layer (SQLite + yfinance), technical indicators (RSI/MACD/Bollinger/ATR), rule-based signal engine, ATR-based risk manager, paper trading simulator, and a Streamlit dashboard. Target markets: IDX, US stocks, and crypto.
 
 `Python` `Streamlit` `yfinance` `TA-Lib`
 
@@ -79,7 +79,7 @@ Sistem simulasi trading saham berbasis AI, modular, dengan 6 modul: data layer (
 <td width="50%" valign="top">
 
 ### 🧠 JANAPATI — Explainable HR Intelligence
-Framework prediksi & preskripsi attrition karyawan yang menggabungkan **SHAP** untuk explainability dan **LLM (Llama 3.3-70B via Groq)** untuk narasi HR otomatis. Risk tiering berbasis persentil, kalibrasi model untuk mengatasi overconfidence bias.
+Employee attrition prediction & prescription framework combining **SHAP** for explainability and an **LLM (Llama 3.3-70B via Groq)** for automated HR narratives. Percentile-based risk tiering, model calibration to counter overconfidence bias.
 
 `Python` `SHAP` `Scikit-learn` `Groq API` `Streamlit`
 
@@ -89,7 +89,7 @@ Framework prediksi & preskripsi attrition karyawan yang menggabungkan **SHAP** u
 <td width="50%" valign="top">
 
 ### ⌨️ A-Ton Keyboard Clicker
-Auto-clicker keyboard untuk Windows dengan overlay dark semi-transparent always-on-top. Menggunakan hardware-level `SendInput` via ctypes untuk kompatibilitas tinggi (termasuk game fullscreen), dibungkus jadi executable dengan PyInstaller.
+Keyboard auto-clicker for Windows with a semi-transparent, always-on-top dark overlay. Uses hardware-level `SendInput` via ctypes for high compatibility (including fullscreen games), packaged as an executable with PyInstaller.
 
 `Python` `Tkinter` `ctypes`
 
@@ -97,7 +97,7 @@ Auto-clicker keyboard untuk Windows dengan overlay dark semi-transparent always-
 <td width="50%" valign="top">
 
 ### 🏢 [DHCIP — Damri Human Capital Intelligence Platform](https://waskithocitoadiwiguno.github.io/details.DHCIP/index.html)
-Sistem dashboard web untuk memantau performa karyawan DAMRI, dengan 4 modul utama: **Dashboard** (ringkasan KPI seluruh karyawan), **Employee Details** (KPI, akhlak, kehadiran, penilaian 360°), **Nine Box Matrix** (pemetaan performa leader/divisi/direktorat), dan **AI Recommendation** (rekomendasi perbaikan otomatis via Gemini Flash 2.5). Live di [dhcip.my.id](https://dhcip.my.id/) · [Halaman Detail Proyek →](https://waskithocitoadiwiguno.github.io/details.DHCIP/index.html)
+Web dashboard system for monitoring DAMRI employee performance, with 4 core modules: **Dashboard** (company-wide KPI summary), **Employee Details** (KPI, work attitude, attendance, 360° assessment), **Nine Box Matrix** (performance mapping across leader/division/directorate), and **AI Recommendation** (automated improvement suggestions via Gemini Flash 2.5). Live at [dhcip.my.id](https://dhcip.my.id/) · [Project Detail Page →](https://waskithocitoadiwiguno.github.io/details.DHCIP/index.html)
 
 `JavaScript / TypeScript` `golang` `PHP` `CI` `Gemini API` `MySQL`
 
