@@ -1,18 +1,19 @@
 <div align="center">
 
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=200&section=header&text=Waskitho%20Cito%20Adiwiguno&fontSize=42&fontColor=ffffff&animation=fadeIn&desc=ML%20%2B%20Explainable%20AI%20Enthusiast&descSize=18&descAlignY=68" width="100%" alt="header" />
+
 <!-- Typing animation -->
 <a href="https://github.com/WaskithoCitoAdiwiguno">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=600&lines=Halo%2C+saya+Waskitho+%F0%9F%91%8B;D4+Teknik+Informatika+%40+ULBI;ML+%2B+Explainable+AI+Enthusiast;Still+learning+but+getting+better." alt="Typing SVG" />
 </a>
 
-</div>
-
-<div align="center">
-  <img src="https://komarev.com/ghpvc/?username=WaskithoCitoAdiwiguno&label=Profile%20Views&color=58A6FF&style=flat" alt="Profile views" />
-  <img src="https://img.shields.io/github/followers/WaskithoCitoAdiwiguno?label=Followers&style=flat&color=58A6FF" alt="Followers" />
-</div>
-
 <br/>
+
+<img src="https://komarev.com/ghpvc/?username=WaskithoCitoAdiwiguno&label=Profile%20Views&color=58A6FF&style=flat" alt="Profile views" />
+<img src="https://img.shields.io/github/followers/WaskithoCitoAdiwiguno?label=Followers&style=flat&color=58A6FF" alt="Followers" />
+<img src="https://img.shields.io/badge/Focus-Explainable%20AI-58A6FF?style=flat" alt="Focus" />
+
+</div>
 
 ## 👨‍💻 Tentang Saya
 
@@ -23,26 +24,30 @@
 - 💼 Mengerjakan riset akademik, freelance data work, dan pengembangan ML terapan
 - 📫 Terbuka untuk kolaborasi seputar ML/AI, data science, dan automation
 
-<br/>
-
 ## 🧰 Tech Stack
 
 <div align="center">
 
+**🧠 AI & Data Science**
+
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
-![CodeIgniter](https://img.shields.io/badge/CodeIgniter-EE4323?style=for-the-badge&logo=codeigniter&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
-![Gradio](https://img.shields.io/badge/Gradio-F97316?style=for-the-badge&logo=gradio&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![Gradio](https://img.shields.io/badge/Gradio-F97316?style=for-the-badge&logo=gradio&logoColor=white)
+
+**🌐 Web & Aplikasi**
+
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![CodeIgniter](https://img.shields.io/badge/CodeIgniter-EE4323?style=for-the-badge&logo=codeigniter&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
+
+**🛠️ Tools**
+
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)
 
 </div>
-
-<br/>
 
 ## 🚀 Proyek Unggulan
 
@@ -85,20 +90,35 @@ Sistem dashboard web untuk memantau performa karyawan DAMRI, dengan 4 modul utam
 </tr>
 </table>
 
-<br/>
-
 ## 📊 GitHub Stats
 
 <div align="center">
 
 <img src="https://github-readme-stats.vercel.app/api?username=WaskithoCitoAdiwiguno&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="GitHub Stats" height="165"/>
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=WaskithoCitoAdiwiguno&theme=tokyonight&hide_border=true" alt="GitHub Streak" height="165"/>
-
+<img src="https://streak-stats.demolab.com?user=WaskithoCitoAdiwiguno&theme=tokyonight&hide_border=true&locale=en" alt="GitHub Streak" height="165"/>
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=WaskithoCitoAdiwiguno&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" height="165"/>
 
 </div>
 
-<br/>
+## 📈 Contribution Activity
+
+<div align="center">
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=WaskithoCitoAdiwiguno&bg_color=1a1b27&color=70a5fd&line=bf91f3&point=38bdae&area=true&area_color=2d2f55&hide_border=true" alt="Contribution Graph" width="100%"/>
+
+</div>
+
+## 🐍 Snake Game
+
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/WaskithoCitoAdiwiguno/WaskithoCitoAdiwiguno/output/github-contribution-grid-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/WaskithoCitoAdiwiguno/WaskithoCitoAdiwiguno/output/github-contribution-grid-snake.svg" />
+  <img alt="Contribution snake animation" src="https://raw.githubusercontent.com/WaskithoCitoAdiwiguno/WaskithoCitoAdiwiguno/output/github-contribution-grid-snake.svg" />
+</picture>
+
+</div>
 
 ## 🏆 Trophies
 
@@ -108,10 +128,18 @@ Sistem dashboard web untuk memantau performa karyawan DAMRI, dengan 4 modul utam
 
 </div>
 
+## 💭 Random Dev Quote
+
+<div align="center">
+
+<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" alt="Random Quote"/>
+
+</div>
+
 <br/>
 
 <div align="center">
 
-*"Still learning but getting better."*
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=120&section=footer" width="100%" alt="footer" />
 
 </div>
