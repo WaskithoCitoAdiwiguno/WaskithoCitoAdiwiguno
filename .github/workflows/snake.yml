@@ -1,6 +1,11 @@
 name: Generate Snake
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'README.md'
   schedule:
     - cron: "0 0 * * *" # runs every day at 00:00 UTC
   workflow_dispatch:

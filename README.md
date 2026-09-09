@@ -118,9 +118,13 @@ Klik kartu <b>🏢 DHCIP</b> di atas untuk membuka halaman detail proyek, atau k
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=WaskithoCitoAdiwiguno&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="GitHub Stats" height="165"/>
-<img src="https://streak-stats.demolab.com?user=WaskithoCitoAdiwiguno&theme=tokyonight&hide_border=true&locale=en" alt="GitHub Streak" height="165"/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=WaskithoCitoAdiwiguno&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" height="165"/>
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=WaskithoCitoAdiwiguno&theme=tokyonight" alt="Profile Details" width="32.5%"/>
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=WaskithoCitoAdiwiguno&theme=tokyonight" alt="GitHub Stats" width="32.5%"/>
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=WaskithoCitoAdiwiguno&theme=tokyonight&utc_offset=7" alt="Productive Time" width="32.5%"/>
+<br/>
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=WaskithoCitoAdiwiguno&theme=tokyonight" alt="Repos per Language" width="32.5%"/>
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=WaskithoCitoAdiwiguno&theme=tokyonight" alt="Most Commit Language" width="32.5%"/>
+<img src="https://streak-stats.demolab.com?user=WaskithoCitoAdiwiguno&theme=tokyonight&hide_border=true&locale=en" alt="GitHub Streak" width="32.5%"/>
 
 </div>
 
@@ -128,7 +132,7 @@ Klik kartu <b>🏢 DHCIP</b> di atas untuk membuka halaman detail proyek, atau k
 
 <div align="center">
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=WaskithoCitoAdiwiguno&bg_color=1a1b27&color=70a5fd&line=bf91f3&point=38bdae&area=true&area_color=2d2f55&hide_border=true" alt="Contribution Graph" width="100%"/>
+<img src="https://ghchart.rshah.org/58A6FF/WaskithoCitoAdiwiguno" alt="Contribution Graph" width="100%"/>
 
 </div>
 
@@ -148,7 +152,7 @@ Klik kartu <b>🏢 DHCIP</b> di atas untuk membuka halaman detail proyek, atau k
 
 <div align="center">
 
-<img src="https://github-profile-trophy.vercel.app/?username=WaskithoCitoAdiwiguno&theme=tokyonight&no-frame=true&row=1&column=6" alt="trophy" />
+<img src="https://github-trophies.vercel.app/?username=WaskithoCitoAdiwiguno&row=1&column=6&no-frame=true&theme=tokyonight" alt="trophy" />
 
 </div>
 
