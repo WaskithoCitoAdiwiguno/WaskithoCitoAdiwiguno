@@ -81,8 +81,8 @@ Auto-clicker keyboard untuk Windows dengan overlay dark semi-transparent always-
 </td>
 <td width="50%" valign="top">
 
-### 🏢 DHCIP — Damri Human Capital Intelligence Platform
-Sistem dashboard web untuk memantau performa karyawan DAMRI, dengan 4 modul utama: **Dashboard** (ringkasan KPI seluruh karyawan), **Employee Details** (KPI, akhlak, kehadiran, penilaian 360°), **Nine Box Matrix** (pemetaan performa leader/divisi/direktorat), dan **AI Recommendation** (rekomendasi perbaikan otomatis via Gemini Flash 2.5). Live di [dhcip.my.id](https://dhcip.my.id/).
+### 🏢 [DHCIP — Damri Human Capital Intelligence Platform](https://waskithocitoadiwiguno.github.io/details.DHCIP/)
+Sistem dashboard web untuk memantau performa karyawan DAMRI, dengan 4 modul utama: **Dashboard** (ringkasan KPI seluruh karyawan), **Employee Details** (KPI, akhlak, kehadiran, penilaian 360°), **Nine Box Matrix** (pemetaan performa leader/divisi/direktorat), dan **AI Recommendation** (rekomendasi perbaikan otomatis via Gemini Flash 2.5). Live di [dhcip.my.id](https://dhcip.my.id/) · [Halaman Detail Proyek →](https://waskithocitoadiwiguno.github.io/details.DHCIP/)
 
 `JavaScript / TypeScript` `golang` `PHP` `CI` `Gemini API` `MySQL`
 
@@ -106,7 +106,7 @@ Sistem dashboard web untuk memantau performa karyawan DAMRI, dengan 4 modul utam
 
 <p align="center" style="margin-top:14px;color:#374151;">
 
-Klik salah satu kartu <b>🚀 Proyek Unggulan</b> di atas — termasuk kartu DHCIP — untuk langsung membuka halaman detail proyek di <a href="https://dhcip.my.id/" target="_blank" rel="noopener noreferrer">dhcip.my.id</a>.
+Klik kartu <b>🏢 DHCIP</b> di atas untuk membuka halaman detail proyek, atau kunjungi langsung di <a href="https://waskithocitoadiwiguno.github.io/details.DHCIP/" target="_blank" rel="noopener noreferrer">waskithocitoadiwiguno.github.io/details.DHCIP</a> · Platform live: <a href="https://dhcip.my.id/" target="_blank" rel="noopener noreferrer">dhcip.my.id</a>.
 
 </p>
 
