@@ -30,6 +30,8 @@
 <div align="center">
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![CodeIgniter](https://img.shields.io/badge/CodeIgniter-EE4323?style=for-the-badge&logo=codeigniter&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
 ![Gradio](https://img.shields.io/badge/Gradio-F97316?style=for-the-badge&logo=gradio&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
@@ -74,8 +76,10 @@ Auto-clicker keyboard untuk Windows dengan overlay dark semi-transparent always-
 </td>
 <td width="50%" valign="top">
 
-### ✨ Proyek berikutnya
-Sedang menyiapkan proyek baru — cek repository terbaru untuk update!
+### 🏢 DHCIP — Damri Human Capital Intelligence Platform
+Sistem dashboard web untuk memantau performa karyawan DAMRI, dengan 4 modul utama: **Dashboard** (ringkasan KPI seluruh karyawan), **Employee Details** (KPI, akhlak, kehadiran, penilaian 360°), **Nine Box Matrix** (pemetaan performa leader/divisi/direktorat), dan **AI Recommendation** (rekomendasi perbaikan otomatis via Gemini Flash 2.5). Live di [dhcip.my.id](https://dhcip.my.id/).
+
+`PHP` `CodeIgniter` `Gemini API` `MySQL`
 
 </td>
 </tr>
