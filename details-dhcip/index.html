@@ -87,6 +87,40 @@
     letter-spacing: .04em;
   }
 
+  .topbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .lang-toggle {
+    display: inline-flex;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: #fff;
+    overflow: hidden;
+  }
+
+  .lang-toggle button {
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .04em;
+    padding: 8px 13px;
+    border: 0;
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    transition: background .15s ease, color .15s ease;
+  }
+
+  .lang-toggle button:hover { color: var(--accent-2); }
+
+  .lang-toggle button.active {
+    background: var(--accent);
+    color: #fff;
+  }
+
   .back-link {
     display: inline-flex;
     align-items: center;
@@ -436,6 +470,7 @@
     .shot-wrap, .section, .cta, footer { padding-left: 16px; padding-right: 16px; }
     .brand span { display: none; }      /* hide brand text, keep mark */
     .back-link { font-size: 12.5px; padding: 7px 12px; }
+    .lang-toggle button { padding: 7px 10px; font-size: 11.5px; }
     .shot-bar .url { max-width: 55vw; overflow: hidden; text-overflow: ellipsis; }
   }
 
@@ -446,28 +481,34 @@
 </head>
 <body>
 
-<!-- Top bar with Back button -->
+<!-- Top bar with language toggle + Back button -->
 <header class="topbar">
   <div class="topbar-inner">
     <a class="brand" href="https://dhcip.my.id/" target="_blank" rel="noopener noreferrer">
       <span class="brand-mark">DH</span>
       <span>DHCIP</span>
     </a>
-    <a class="back-link" href="https://github.com/WaskithoCitoAdiwiguno" target="_blank" rel="noopener noreferrer">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/>
-      </svg>
-      Kembali ke Profil
-    </a>
+    <div class="topbar-actions">
+      <div class="lang-toggle" role="group" aria-label="Pilih bahasa / Choose language">
+        <button type="button" data-lang="id" class="active">ID</button>
+        <button type="button" data-lang="en">ENG</button>
+      </div>
+      <a class="back-link" href="https://github.com/WaskithoCitoAdiwiguno" target="_blank" rel="noopener noreferrer">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/>
+        </svg>
+        <span data-i18n="back">Kembali ke Profil</span>
+      </a>
+    </div>
   </div>
 </header>
 
 <main>
   <!-- Hero -->
   <section class="hero">
-    <span class="kicker"><span class="dot"></span>Proyek Unggulan · Web Dashboard</span>
+    <span class="kicker"><span class="dot"></span><span data-i18n="kicker">Proyek Unggulan · Web Dashboard</span></span>
     <h1>DHCIP <span class="thin">— Damri Human Capital Intelligence Platform</span></h1>
-    <p class="lede">
+    <p class="lede" data-i18n="lede">
       Sistem dashboard web untuk memantau performa karyawan DAMRI secara menyeluruh —
       dari ringkasan KPI perusahaan, detail penilaian tiap individu, pemetaan talenta lewat
       Nine Box Matrix, hingga rekomendasi perbaikan otomatis berbasis AI.
@@ -483,7 +524,7 @@
         <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.75 2.69 1.25 3.34.95.1-.74.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.18-1.49 3.14-1.18 3.14-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.83 1.18 3.09 0 4.42-2.69 5.39-5.25 5.67.41.35.77 1.04.77 2.1 0 1.52-.01 2.75-.01 3.13 0 .3.2.67.8.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/>
         </svg>
-        GitHub Profil
+        <span data-i18n="btnGithub">GitHub Profil</span>
       </a>
     </div>
   </section>
@@ -502,49 +543,49 @@
 
   <!-- Modul utama -->
   <section class="section">
-    <h2 class="section-title">Empat Modul Utama</h2>
-    <p class="section-sub">Semua aspek manajemen kinerja karyawan DAMRI dalam satu platform terintegrasi.</p>
+    <h2 class="section-title" data-i18n="modulesTitle">Empat Modul Utama</h2>
+    <p class="section-sub" data-i18n="modulesSub">Semua aspek manajemen kinerja karyawan DAMRI dalam satu platform terintegrasi.</p>
     <div class="grid">
       <article class="card">
         <span class="num">01</span>
         <h3>Dashboard</h3>
-        <p>Ringkasan KPI seluruh karyawan dalam satu tampilan — agregasi performa lintas unit kerja secara real-time.</p>
+        <p data-i18n="card1Body">Ringkasan KPI seluruh karyawan dalam satu tampilan — agregasi performa lintas unit kerja secara real-time.</p>
       </article>
       <article class="card">
         <span class="num">02</span>
         <h3>Employee Details</h3>
-        <p>Profil kinerja individual: KPI, akhlak, kehadiran, dan penilaian 360° dari rekan, atasan, serta bawahan.</p>
+        <p data-i18n="card2Body">Profil kinerja individual: KPI, akhlak, kehadiran, dan penilaian 360° dari rekan, atasan, serta bawahan.</p>
       </article>
       <article class="card">
         <span class="num">03</span>
         <h3>Nine Box Matrix</h3>
-        <p>Pemetaan performa dan potensi pada tiga level: karyawan, leader, divisi, hingga direktorat.</p>
+        <p data-i18n="card3Body">Pemetaan performa dan potensi pada tiga level: karyawan, leader, divisi, hingga direktorat.</p>
       </article>
       <article class="card">
         <span class="num">04</span>
         <h3>AI Recommendation</h3>
-        <p>Rekomendasi perbaikan otomatis berbasis Gemini Flash 2.5, disusun dari data kinerja tiap karyawan.</p>
+        <p data-i18n="card4Body">Rekomendasi perbaikan otomatis berbasis Gemini Flash 2.5, disusun dari data kinerja tiap karyawan.</p>
       </article>
     </div>
   </section>
 
   <!-- Arsitektur & highlight -->
   <section class="section">
-    <h2 class="section-title">Arsitektur &amp; Cakupan Data</h2>
-    <p class="section-sub">Dibangun sebagai aplikasi web multi-layer dengan penilaian multi-sumber.</p>
+    <h2 class="section-title" data-i18n="archTitle">Arsitektur &amp; Cakupan Data</h2>
+    <p class="section-sub" data-i18n="archSub">Dibangun sebagai aplikasi web multi-layer dengan penilaian multi-sumber.</p>
     <div class="arch">
       <div class="panel">
         <h3>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <rect x="2" y="3" width="20" height="6" rx="1"/><rect x="4" y="11" width="16" height="6" rx="1"/><line x1="7" y1="17" x2="7" y2="21"/><line x1="17" y1="17" x2="17" y2="21"/>
           </svg>
-          Struktur Sistem
+          <span data-i18n="sysTitle">Struktur Sistem</span>
         </h3>
         <ul>
-          <li><b>Frontend</b> — antarmuka dashboard interaktif (JavaScript / TypeScript)</li>
-          <li><b>Backend</b> — layanan aplikasi Golang &amp; PHP (CodeIgniter)</li>
-          <li><b>Database</b> — MySQL untuk data karyawan, penilaian, dan histori KPI</li>
-          <li><b>Layanan AI</b> — integrasi Gemini API untuk analisis dan rekomendasi</li>
+          <li data-i18n="sys1"><b>Frontend</b> — antarmuka dashboard interaktif (JavaScript / TypeScript)</li>
+          <li data-i18n="sys2"><b>Backend</b> — layanan aplikasi Golang &amp; PHP (CodeIgniter)</li>
+          <li data-i18n="sys3"><b>Database</b> — MySQL untuk data karyawan, penilaian, dan histori KPI</li>
+          <li data-i18n="sys4"><b>Layanan AI</b> — integrasi Gemini API untuk analisis dan rekomendasi</li>
         </ul>
       </div>
       <div class="panel">
@@ -552,13 +593,13 @@
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
           </svg>
-          Aspek Penilaian
+          <span data-i18n="aspTitle">Aspek Penilaian</span>
         </h3>
         <ul>
-          <li><b>KPI</b> — indikator kinerja utama per periode penilaian</li>
-          <li><b>Akhlak</b> — dimens sikap dan perilaku kerja</li>
-          <li><b>Kehadiran</b> — rekam disiplin kehadiran karyawan</li>
-          <li><b>Penilaian 360°</b> — umpan balik dari rekan, atasan, dan bawahan</li>
+          <li data-i18n="asp1"><b>KPI</b> — indikator kinerja utama per periode penilaian</li>
+          <li data-i18n="asp2"><b>Akhlak</b> — dimensi sikap dan perilaku kerja</li>
+          <li data-i18n="asp3"><b>Kehadiran</b> — rekam disiplin kehadiran karyawan</li>
+          <li data-i18n="asp4"><b>Penilaian 360°</b> — umpan balik dari rekan, atasan, dan bawahan</li>
         </ul>
       </div>
     </div>
@@ -566,8 +607,8 @@
 
   <!-- Tech stack -->
   <section class="section">
-    <h2 class="section-title">Teknologi yang Digunakan</h2>
-    <p class="section-sub">Stack yang menopang seluruh platform.</p>
+    <h2 class="section-title" data-i18n="techTitle">Teknologi yang Digunakan</h2>
+    <p class="section-sub" data-i18n="techSub">Stack yang menopang seluruh platform.</p>
     <div class="stack">
       <span class="chip"><span class="c" style="background:#3178c6"></span>JavaScript / TypeScript</span>
       <span class="chip"><span class="c" style="background:#00add8"></span>Golang</span>
@@ -580,20 +621,20 @@
 
   <!-- Highlights -->
   <section class="section">
-    <h2 class="section-title">Sekilas</h2>
-    <p class="section-sub">Poin-poin yang membuat DHCIP bermanfaat bagi manajemen.</p>
+    <h2 class="section-title" data-i18n="glanceTitle">Sekilas</h2>
+    <p class="section-sub" data-i18n="glanceSub">Poin-poin yang membuat DHCIP bermanfaat bagi manajemen.</p>
     <div class="highlights">
       <div class="hl">
-        <div class="big">4 Modul</div>
+        <div class="big" data-i18n="hl1Big">4 Modul</div>
         <div class="lbl">Dashboard, Employee Details, Nine Box Matrix, AI Recommendation</div>
       </div>
       <div class="hl">
         <div class="big">360°</div>
-        <div class="lbl">Penilaian multi-sumber: rekan, atasan, dan bawahan</div>
+        <div class="lbl" data-i18n="hl2Lbl">Penilaian multi-sumber: rekan, atasan, dan bawahan</div>
       </div>
       <div class="hl">
         <div class="big">AI-Powered</div>
-        <div class="lbl">Rekomendasi perbaikan otomatis via Gemini Flash 2.5</div>
+        <div class="lbl" data-i18n="hl3Lbl">Rekomendasi perbaikan otomatis via Gemini Flash 2.5</div>
       </div>
     </div>
   </section>
@@ -602,12 +643,12 @@
   <section class="cta">
     <div class="cta-box">
       <div>
-        <h2>Lihat Platform Secara Langsung</h2>
-        <p>Seluruh modul DHCIP dapat diakses melalui deployment resmi di dhcip.my.id.</p>
+        <h2 data-i18n="ctaTitle">Lihat Platform Secara Langsung</h2>
+        <p data-i18n="ctaSub">Seluruh modul DHCIP dapat diakses melalui deployment resmi di dhcip.my.id.</p>
       </div>
       <div class="cta-actions">
-        <a class="btn" href="https://dhcip.my.id/" target="_blank" rel="noopener noreferrer">Buka dhcip.my.id ↗</a>
-        <a class="btn" href="https://github.com/WaskithoCitoAdiwiguno" target="_blank" rel="noopener noreferrer">Profil GitHub ↗</a>
+        <a class="btn" href="https://dhcip.my.id/" target="_blank" rel="noopener noreferrer"><span data-i18n="ctaBtn1">Buka dhcip.my.id ↗</span></a>
+        <a class="btn" href="https://github.com/WaskithoCitoAdiwiguno" target="_blank" rel="noopener noreferrer"><span data-i18n="ctaBtn2">Profil GitHub ↗</span></a>
       </div>
     </div>
   </section>
@@ -617,6 +658,116 @@
   <span>© 2026 Waskitho Cito Adiwiguno — DHCIP</span>
   <span><a href="https://dhcip.my.id/" target="_blank" rel="noopener noreferrer">dhcip.my.id</a> · <a href="https://github.com/WaskithoCitoAdiwiguno" target="_blank" rel="noopener noreferrer">GitHub</a></span>
 </footer>
+
+<script>
+(function () {
+  'use strict';
+
+  var i18n = {
+    id: {
+      back: 'Kembali ke Profil',
+      kicker: 'Proyek Unggulan · Web Dashboard',
+      lede: 'Sistem dashboard web untuk memantau performa karyawan DAMRI secara menyeluruh — dari ringkasan KPI perusahaan, detail penilaian tiap individu, pemetaan talenta lewat Nine Box Matrix, hingga rekomendasi perbaikan otomatis berbasis AI.',
+      btnGithub: 'GitHub Profil',
+      modulesTitle: 'Empat Modul Utama',
+      modulesSub: 'Semua aspek manajemen kinerja karyawan DAMRI dalam satu platform terintegrasi.',
+      card1Body: 'Ringkasan KPI seluruh karyawan dalam satu tampilan — agregasi performa lintas unit kerja secara real-time.',
+      card2Body: 'Profil kinerja individual: KPI, akhlak, kehadiran, dan penilaian 360° dari rekan, atasan, serta bawahan.',
+      card3Body: 'Pemetaan performa dan potensi pada tiga level: karyawan, leader, divisi, hingga direktorat.',
+      card4Body: 'Rekomendasi perbaikan otomatis berbasis Gemini Flash 2.5, disusun dari data kinerja tiap karyawan.',
+      archTitle: 'Arsitektur &amp; Cakupan Data',
+      archSub: 'Dibangun sebagai aplikasi web multi-layer dengan penilaian multi-sumber.',
+      sysTitle: 'Struktur Sistem',
+      sys1: '<b>Frontend</b> — antarmuka dashboard interaktif (JavaScript / TypeScript)',
+      sys2: '<b>Backend</b> — layanan aplikasi Golang &amp; PHP (CodeIgniter)',
+      sys3: '<b>Database</b> — MySQL untuk data karyawan, penilaian, dan histori KPI',
+      sys4: '<b>Layanan AI</b> — integrasi Gemini API untuk analisis dan rekomendasi',
+      aspTitle: 'Aspek Penilaian',
+      asp1: '<b>KPI</b> — indikator kinerja utama per periode penilaian',
+      asp2: '<b>Akhlak</b> — dimensi sikap dan perilaku kerja',
+      asp3: '<b>Kehadiran</b> — rekam disiplin kehadiran karyawan',
+      asp4: '<b>Penilaian 360°</b> — umpan balik dari rekan, atasan, dan bawahan',
+      techTitle: 'Teknologi yang Digunakan',
+      techSub: 'Stack yang menopang seluruh platform.',
+      glanceTitle: 'Sekilas',
+      glanceSub: 'Poin-poin yang membuat DHCIP bermanfaat bagi manajemen.',
+      hl1Big: '4 Modul',
+      hl2Lbl: 'Penilaian multi-sumber: rekan, atasan, dan bawahan',
+      hl3Lbl: 'Rekomendasi perbaikan otomatis via Gemini Flash 2.5',
+      ctaTitle: 'Lihat Platform Secara Langsung',
+      ctaSub: 'Seluruh modul DHCIP dapat diakses melalui deployment resmi di dhcip.my.id.',
+      ctaBtn1: 'Buka dhcip.my.id ↗',
+      ctaBtn2: 'Profil GitHub ↗'
+    },
+    en: {
+      back: 'Back to Profile',
+      kicker: 'Featured Project · Web Dashboard',
+      lede: 'A web dashboard system for monitoring DAMRI employee performance end to end — from company-wide KPI summaries and individual assessment details, to talent mapping via the Nine Box Matrix and automated AI-powered improvement recommendations.',
+      btnGithub: 'GitHub Profile',
+      modulesTitle: 'Four Core Modules',
+      modulesSub: 'Every aspect of DAMRI employee performance management in one integrated platform.',
+      card1Body: 'Company-wide KPI summary in a single view — real-time performance aggregation across work units.',
+      card2Body: 'Individual performance profile: KPI, work attitude (akhlak), attendance, and 360° feedback from peers, managers, and subordinates.',
+      card3Body: 'Performance and potential mapping across three levels: employee, leader, division, up to directorate.',
+      card4Body: 'Automated improvement recommendations powered by Gemini Flash 2.5, built from each employee\u2019s performance data.',
+      archTitle: 'Architecture &amp; Data Scope',
+      archSub: 'Built as a multi-layer web application with multi-source assessments.',
+      sysTitle: 'System Structure',
+      sys1: '<b>Frontend</b> — interactive dashboard interface (JavaScript / TypeScript)',
+      sys2: '<b>Backend</b> — application services in Golang &amp; PHP (CodeIgniter)',
+      sys3: '<b>Database</b> — MySQL for employee data, assessments, and KPI history',
+      sys4: '<b>AI Services</b> — Gemini API integration for analysis and recommendations',
+      aspTitle: 'Assessment Aspects',
+      asp1: '<b>KPI</b> — key performance indicators per assessment period',
+      asp2: '<b>Akhlak</b> — work attitude and behavioral dimensions',
+      asp3: '<b>Attendance</b> — employee attendance discipline records',
+      asp4: '<b>360° Assessment</b> — feedback from peers, managers, and subordinates',
+      techTitle: 'Technologies Used',
+      techSub: 'The stack powering the entire platform.',
+      glanceTitle: 'At a Glance',
+      glanceSub: 'What makes DHCIP valuable for management.',
+      hl1Big: '4 Modules',
+      hl2Lbl: 'Multi-source assessment: peers, managers, and subordinates',
+      hl3Lbl: 'Automated improvement recommendations via Gemini Flash 2.5',
+      ctaTitle: 'See the Platform Live',
+      ctaSub: 'All DHCIP modules are accessible through the official deployment at dhcip.my.id.',
+      ctaBtn1: 'Open dhcip.my.id ↗',
+      ctaBtn2: 'GitHub Profile ↗'
+    }
+  };
+
+  var STORE_KEY = 'dhcip-lang';
+
+  function setLang(lang) {
+    var dict = i18n[lang] || i18n.id;
+    document.documentElement.lang = lang;
+
+    var nodes = document.querySelectorAll('[data-i18n]');
+    for (var i = 0; i < nodes.length; i++) {
+      var key = nodes[i].getAttribute('data-i18n');
+      if (dict[key] !== undefined) nodes[i].innerHTML = dict[key];
+    }
+
+    var buttons = document.querySelectorAll('.lang-toggle button');
+    for (var j = 0; j < buttons.length; j++) {
+      buttons[j].classList.toggle('active', buttons[j].getAttribute('data-lang') === lang);
+    }
+
+    try { localStorage.setItem(STORE_KEY, lang); } catch (e) { /* private mode */ }
+  }
+
+  var toggle = document.querySelectorAll('.lang-toggle button');
+  for (var k = 0; k < toggle.length; k++) {
+    toggle[k].addEventListener('click', function () {
+      setLang(this.getAttribute('data-lang'));
+    });
+  }
+
+  var saved = 'id';
+  try { saved = localStorage.getItem(STORE_KEY) || 'id'; } catch (e) { /* private mode */ }
+  setLang(saved);
+})();
+</script>
 
 </body>
 </html>
