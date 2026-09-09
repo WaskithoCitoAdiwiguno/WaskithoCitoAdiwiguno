@@ -84,11 +84,35 @@ Auto-clicker keyboard untuk Windows dengan overlay dark semi-transparent always-
 ### 🏢 DHCIP — Damri Human Capital Intelligence Platform
 Sistem dashboard web untuk memantau performa karyawan DAMRI, dengan 4 modul utama: **Dashboard** (ringkasan KPI seluruh karyawan), **Employee Details** (KPI, akhlak, kehadiran, penilaian 360°), **Nine Box Matrix** (pemetaan performa leader/divisi/direktorat), dan **AI Recommendation** (rekomendasi perbaikan otomatis via Gemini Flash 2.5). Live di [dhcip.my.id](https://dhcip.my.id/).
 
-`PHP` `CodeIgniter` `Gemini API` `MySQL`
+`JavaScript / TypeScript` `golang` `PHP` `CI` `Gemini API` `MySQL`
 
 </td>
 </tr>
 </table>
+
+<br/>
+
+<div align="center">
+
+<p align="center">
+
+<a href="https://dhcip.my.id/" target="_blank" rel="noopener noreferrer">
+
+<img src="https://raw.githubusercontent.com/WaskithoCitoAdiwiguno/WaskithoCitoAdiwiguno/main/assets/dhcip-screenshot.png" alt="DHCIP — Damri Human Capital Intelligence Platform" width="100%" style="border-radius:10px;border:1px solid #e5e7eb;">
+
+</a>
+
+</p>
+
+<p align="center" style="margin-top:14px;color:#374151;">
+
+Klik salah satu kartu <b>🚀 Proyek Unggulan</b> di atas — termasuk kartu DHCIP — untuk langsung membuka halaman detail proyek di <a href="https://dhcip.my.id/" target="_blank" rel="noopener noreferrer">dhcip.my.id</a>.
+
+</p>
+
+</div>
+
+<br/>
 
 ## 📊 GitHub Stats
 
