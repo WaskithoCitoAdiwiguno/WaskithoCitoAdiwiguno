@@ -102,28 +102,6 @@ Sistem dashboard web untuk memantau performa karyawan DAMRI, dengan 4 modul utam
 
 <br/>
 
-<div align="center">
-
-<p align="center">
-
-<a href="https://dhcip.my.id/" target="_blank" rel="noopener noreferrer">
-
-<img src="https://raw.githubusercontent.com/WaskithoCitoAdiwiguno/WaskithoCitoAdiwiguno/main/assets/dhcip-screenshot.png" alt="DHCIP — Damri Human Capital Intelligence Platform" width="400" style="border-radius:10px;border:1px solid #e5e7eb;">
-
-</a>
-
-</p>
-
-<p align="center" style="margin-top:14px;color:#374151;">
-
-Klik kartu <b>🏢 DHCIP</b> di atas untuk membuka halaman detail proyek, atau kunjungi langsung di <a href="https://waskithocitoadiwiguno.github.io/details.DHCIP/index.html" target="_blank" rel="noopener noreferrer">waskithocitoadiwiguno.github.io/details.DHCIP</a> · Platform live: <a href="https://dhcip.my.id/" target="_blank" rel="noopener noreferrer">dhcip.my.id</a>.
-
-</p>
-
-</div>
-
-<br/>
-
 ## 📊 GitHub Stats
 
 <div align="center">
