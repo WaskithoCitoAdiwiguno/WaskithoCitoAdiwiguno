@@ -69,9 +69,9 @@ Modular AI-based stock trading simulation system with 6 modules: data layer (SQL
 
 ### 🧠 Explainable HR Intelligence
 
-Employee attrition prediction & prescription framework combining **SHAP** for explainability and an **LLM (Llama 3.3-70B via Groq)** for automated HR narratives. Percentile-based risk tiering, model calibration to counter overconfidence bias.
+AI Employee Attrition Detector — memprediksi risiko resign karyawan sekaligus menjelaskannya: **10 model diadu** (Logistic Regression menang: ROC-AUC 0.799, Recall 0.596), **SHAP waterfall** per karyawan, dan **LLM via Groq** yang menerjemahkan angka SHAP menjadi ringkasan & rekomendasi HR. Risk tiering: Rendah <30% / Sedang 30–60% / Tinggi >60%. · [📄 Project Detail Page →](https://waskithocitoadiwiguno.github.io/details.ExplainableHRIntelligence/)
 
-`Python` `SHAP` `Scikit-learn` `Groq API` `Streamlit`
+`Python` `SHAP` `Scikit-learn` `Groq API` `Gradio`
 
 ### ⌨️ A-Ton Keyboard Clicker
 
