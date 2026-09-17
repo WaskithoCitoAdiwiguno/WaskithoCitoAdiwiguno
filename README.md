@@ -116,13 +116,37 @@ Web dashboard system for monitoring DAMRI employee performance, with 4 core modu
 
 ### Books
 
-3. **_ (Book Title)**
-   - 📖 Published via: Google Books
-   - 🔗 [Link to book](https://www.google.co.id/books/edition/_/HNzLEAAAQBAJ?hl=id&sa=X&ved=2ahUKEwiuuMeDtOKWAxUwwjgGHb7wDnoQre8FegQIChAE)
+3. **Pengenalan Golang dan Membuat Package**
+   - 📖 Published via: Penerbit Buku Pedia (available on Google Books) — July 2023, 104 pages
+   - 🔗 [Link to book](https://books.google.co.id/books?id=HNzLEAAAQBAJ)
+   - 👥 Co-authors: Muhammad Wildan Khalilurrahman, Rolly Maulana Awangga
 
-## 🏅 Certifications
+## 🏅 Certifications & Awards
 
-*Certifications section coming soon...*
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/certificates-dark.png" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/certificates-light.png" />
+  <img alt="Certificate wall — SAP ABAP, Go, Java Fundamentals, and campus awards" src="assets/certificates-dark.png" width="100%" />
+</picture>
+
+</div>
+
+<details>
+<summary>📋 <b>Daftar sertifikat / Certificate list</b></summary>
+
+| # | Certificate | Issuer / Context | Date |
+|---|---|---|---|
+| 1 | BC400 — Introduction to the ABAP Workbench | SAP (via ULBI) | Feb 2025 |
+| 2 | GO Programming Language | Great Learning Academy | May 2025 |
+| 3 | Java Fundamentals — Final Exam Completion | Oracle Academy | Jan 2023 |
+| 4 | Java Fundamentals — Coursework Completion | Oracle Academy | Jan 2023 |
+| 5 | Piagam Penghargaan (Award of Recognition) | Polres Cimahi | Feb 2022 |
+| 6 | MORRIS IF'23 — Seminar Participant | HIMATIF ULBI | Jan 2024 |
+| 7 | Kuliah Umum — Public Lecture | HIMATIF ULBI | May 2024 |
+
+</details>
 
 ---
 
