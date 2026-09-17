@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Employee Attrition Detector · EAP</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <div class="header-row">
+      <div class="brand">
+        <span class="brand-mark">EAP</span>
+        <span class="brand-title">AI Employee Attrition Detector</span>
+      </div>
+      <div class="header-badge">
+        <span class="badge">Model: Logistic Regression</span>
+        <span class="badge">XAI: SHAP</span>
+      </div>
+    </div>
+    <p class="lead">
+      Prediksi risiko resign karyawan + penjelasan XAI + rekomendasi HR.
+      <span class="muted">(Backend demo ·huggingface/spaces)</span>
+    </p>
+  </header>
+
+  <main class="container">
+    <section class="card settings-card">
+      <h2 class="card-title">Groq API Key</h2>
+      <p class="card-help">
+        Proyek ini tidak menyertakan kunci API apa pun. Masukkan kunci Groq Anda sendiri
+        (buat gratis di console.groq.com) untuk mengaktifkan Ringkasan HR.
+      </p>
+      <div class="custom-key-row" id="customKeyRow">
+        <label for="customKeyInput">Groq API key</label>
+        <div class="input-with-btn">
+          <input
+            id="customKeyInput"
+            type="password"
+            placeholder="gsk_..."
+            autocomplete="off"
+          />
+          <button type="button" id="saveCustomKeyBtn" class="btn btn-secondary">Simpan kunci</button>
+          <button type="button" id="clearCustomKeyBtn" class="btn btn-secondary">Hapus</button>
+        </div>
+        <p class="card-help small">Kunci hanya dikirim ke backend dan tidak disimpan di halaman ini.</p>
+      </div>
+      <div class="key-status" id="keyStatusBox" aria-live="polite"></div>
+    </section>
+
+    <section class="card training-card">
+      <div class="card-header-row">
+        <div>
+          <h2 class="card-title">Model & Artifacts</h2>
+          <p class="card-help">Klik “Mulai pelatihan” untuk menyusun ulang model, scaler, dan explainer SHAP
+            seperti alur notebook asli.</p>
+        </div>
+        <button id="trainBtn" class="btn btn-primary">Mulai pelatihan</button>
+      </div>
+      <div class="train-status hidden" id="trainStatusBox" aria-live="polite"></div>
+    </section>
+
+    <section class="card predict-card">
+      <h2 class="card-title">Prediksi Karyawan</h2>
+      <p class="card-help">Isi form di bawah sesuai data karyawan, lalu jalankan prediksi + penjelasan SHAP.</p>
+
+      <div class="form-grid" id="employeeForm">
+        <fieldset class="field-group field-group-demo">
+          <legend>Data Demografi & Pekerjaan</legend>
+          <label class="field"><span>Umur</span><input type="number" name="Age" min="18" max="60" value="35" /></label>
+          <label class="field"><span>Jarak dari Rumah (km)</span><input type="number" name="DistanceFromHome" min="1" max="30" value="5" /></label>
+          <label class="field"><span>Level Pendidikan (1=SMA…5=S3)</span><input type="number" name="Education" min="1" max="5" value="3" /></label>
+          <label class="field"><span>Job Level</span><input type="number" name="JobLevel" min="1" max="5" value="2" /></label>
+          <label class="field"><span>Total Tahun Bekerja</span><input type="number" name="TotalWorkingYears" min="0" max="40" value="8" /></label>
+          <label class="field"><span>Tahun di Perusahaan Ini</span><input type="number" name="YearsAtCompany" min="0" max="40" value="5" /></label>
+          <label class="field"><span>Tahun di Posisi Sekarang</span><input type="number" name="YearsInCurrentRole" min="0" max="20" value="3" /></label>
+          <label class="field"><span>Tahun Sejak Promosi Terakhir</span><input type="number" name="YearsSinceLastPromotion" min="0" max="15" value="1" /></label>
+          <label class="field"><span>Tahun dengan Manager Sekarang</span><input type="number" name="YearsWithCurrManager" min="0" max="20" value="3" /></label>
+          <label class="field"><span>Jumlah Perusahaan Sebelumnya</span><input type="number" name="NumCompaniesWorked" min="0" max="10" value="2" /></label>
+        </fieldset>
+
+        <fieldset class="field-group field-group-comp">
+          <legend>Kompensasi & Karir</legend>
+          <label class="field"><span>Gaji Bulanan</span><input type="number" name="MonthlyIncome" min="1000" max="20000" value="5000" step="1" /></label>
+          <label class="field"><span>Persen Kenaikan Gaji Terakhir</span><input type="number" name="PercentSalaryHike" min="10" max="25" value="13" /></label>
+          <label class="field"><span>Stock Option Level</span><input type="number" name="StockOptionLevel" min="0" max="3" value="1" /></label>
+          <label class="field"><span>Performance Rating</span><input type="number" name="PerformanceRating" min="1" max="4" value="3" /></label>
+          <label class="field"><span>Frekuensi Training/Tahun</span><input type="number" name="TrainingTimesLastYear" min="0" max="6" value="2" /></label>
+        </fieldset>
+
+        <fieldset class="field-group field-group-sat">
+          <legend>Kepuasan Kerja</legend>
+          <label class="field"><span>Kepuasan Lingkungan Kerja</span><input type="number" name="EnvironmentSatisfaction" min="1" max="4" value="3" /></label>
+          <label class="field"><span>Kepuasan Kerja</span><input type="number" name="JobSatisfaction" min="1" max="4" value="3" /></label>
+          <label class="field"><span>Keterlibatan Kerja</span><input type="number" name="JobInvolvement" min="1" max="4" value="3" /></label>
+          <label class="field"><span>Kepuasan Relasi Kerja</span><input type="number" name="RelationshipSatisfaction" min="1" max="4" value="3" /></label>
+          <label class="field"><span>Work-Life Balance</span><input type="number" name="WorkLifeBalance" min="1" max="4" value="3" /></label>
+        </fieldset>
+
+        <fieldset class="field-group field-group-cat">
+          <legend>Kategori</legend>
+          <label class="field"><span>Frekuensi Perjalanan Dinas</span>
+            <select name="BusinessTravel">
+              <option>Travel_Rarely</option>
+              <option>Travel_Frequently</option>
+              <option>Non-Travel</option>
+            </select>
+          </label>
+          <label class="field"><span>Departemen</span>
+            <select name="Department">
+              <option>Research &amp; Development</option>
+              <option>Sales</option>
+              <option>Human Resources</option>
+            </select>
+          </label>
+          <label class="field"><span>Bidang Pendidikan</span>
+            <select name="EducationField">
+              <option>Life Sciences</option>
+              <option>Other</option>
+              <option>Medical</option>
+              <option>Marketing</option>
+              <option>Human Resources</option>
+              <option>Technical Degree</option>
+              <option>Law</option>
+            </select>
+          </label>
+          <label class="field"><span>Gender</span>
+            <select name="Gender">
+              <option>Male</option>
+              <option>Female</option>
+            </select>
+          </label>
+          <label class="field"><span>Job Role</span>
+            <select name="JobRole">
+              <option>Sales Executive</option>
+              <option>Research Scientist</option>
+              <option>Laboratory Technician</option>
+              <option>Manufacturing Director</option>
+              <option>Healthcare Representative</option>
+              <option>Manager</option>
+              <option>Sales Representative</option>
+              <option>Research Director</option>
+              <option>Human Resources</option>
+              <option>Software Engineer</option>
+            </select>
+          </label>
+          <label class="field"><span>Status Pernikahan</span>
+            <select name="MaritalStatus">
+              <option>Married</option>
+              <option>Divorced</option>
+              <option>Single</option>
+            </select>
+          </label>
+          <label class="field"><span>Sering Lembur?</span>
+            <select name="OverTime">
+              <option>No</option>
+              <option>Yes</option>
+            </select>
+          </label>
+        </fieldset>
+      </div>
+
+      <div class="predict-actions">
+        <button id="predictBtn" class="btn btn-primary">🔮 Prediksi &amp; Jelaskan</button>
+      </div>
+
+      <div class="output-area hidden" id="outputArea" aria-live="polite">
+        <article class="result-box">
+          <div class="result-row">
+            <div class="result-main">
+              <div class="result-label" id="resultLabel"></div>
+              <div class="risk-tier" id="resultRiskTier"></div>
+            </div>
+            <div class="result-score">
+              <div class="score-value" id="resultProbability"></div>
+              <div class="score-label">Kemungkinan resign</div>
+            </div>
+          </div>
+
+          <div class="section-block">
+            <h3 class="sub-title">Faktor Utama (SHAP)</h3>
+            <p class="card-help small">Bar yang lebih panjang = kontribusi lebih besar terhadap prediksi.</p>
+            <div class="shap-wrap" id="shapWrap"></div>
+          </div>
+
+          <div class="section-block">
+            <h3 class="sub-title">Penjelasan</h3>
+            <div class="explanation-wrap" id="explanationWrap"></div>
+          </div>
+
+          <div class="section-block">
+            <h3 class="sub-title">Ringkasan HR (Groq)</h3>
+            <div class="narrative-wrap" id="narrativeWrap"></div>
+          </div>
+        </article>
+      </div>
+
+      <div class="output-area hidden" id="errorBox" role="alert"></div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <p>Demo ini mencerminkan alur notebook asli: logistic regression sebagai model aktif, SHAP untuk
+      penjelasan, dan Groq untuk narasi HR.</p>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

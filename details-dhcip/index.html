@@ -7,477 +7,14 @@
 <meta name="description" content="DHCIP (Damri Human Capital Intelligence Platform) — dashboard web untuk memantau performa karyawan DAMRI: KPI, Nine Box Matrix, penilaian 360°, dan rekomendasi AI otomatis." />
 <meta property="og:title" content="DHCIP — Damri Human Capital Intelligence Platform" />
 <meta property="og:description" content="Dashboard performa karyawan DAMRI: 4 modul — Dashboard KPI, Employee Details, Nine Box Matrix, dan AI Recommendation via Gemini." />
-<meta property="og:image" content="dhcip-screenshot.png" />
+<meta property="og:image" content="src/img/dashboard-utama.png" />
 <meta name="theme-color" content="#0d9488" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
 
-<style>
-  :root {
-    --bg: #f6f7f9;
-    --surface: #ffffff;
-    --ink: #16232e;
-    --muted: #5b6b78;
-    --line: #e4e9ee;
-    --accent: #0d9488;
-    --accent-2: #0f766e;
-    --accent-soft: #e6f4f2;
-    --gold: #b58a2f;
-    --shadow-sm: 0 1px 2px rgba(22, 35, 46, .05);
-    --shadow-md: 0 10px 30px rgba(22, 35, 46, .07);
-    --radius: 16px;
-  }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
-    background: var(--bg);
-    color: var(--ink);
-    line-height: 1.65;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  /* ---------- Top bar ---------- */
-  .topbar {
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    background: rgba(255, 255, 255, .86);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--line);
-  }
-
-  .topbar-inner {
-    max-width: 1080px;
-    margin: 0 auto;
-    padding: 14px 24px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-  }
-
-  .brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-family: 'Space Grotesk', 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: 15px;
-    letter-spacing: .01em;
-    color: var(--ink);
-    text-decoration: none;
-  }
-
-  .brand-mark {
-    width: 30px;
-    height: 30px;
-    border-radius: 9px;
-    background: linear-gradient(135deg, var(--accent) 0%, #115e59 100%);
-    color: #fff;
-    display: grid;
-    place-items: center;
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: .04em;
-  }
-
-  .topbar-actions {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .lang-toggle {
-    display: inline-flex;
-    border: 1px solid var(--line);
-    border-radius: 999px;
-    background: #fff;
-    overflow: hidden;
-  }
-
-  .lang-toggle button {
-    font-family: inherit;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: .04em;
-    padding: 8px 13px;
-    border: 0;
-    background: transparent;
-    color: var(--muted);
-    cursor: pointer;
-    transition: background .15s ease, color .15s ease;
-  }
-
-  .lang-toggle button:hover { color: var(--accent-2); }
-
-  .lang-toggle button.active {
-    background: var(--accent);
-    color: #fff;
-  }
-
-  .back-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 13.5px;
-    font-weight: 600;
-    color: var(--accent-2);
-    text-decoration: none;
-    padding: 8px 14px;
-    border: 1px solid var(--line);
-    border-radius: 999px;
-    background: #fff;
-    transition: border-color .18s ease, transform .18s ease, box-shadow .18s ease;
-    white-space: nowrap;
-  }
-
-  .back-link:hover {
-    border-color: var(--accent);
-    transform: translateX(-2px);
-    box-shadow: var(--shadow-sm);
-  }
-
-  .back-link svg { flex: 0 0 auto; }
-
-  /* ---------- Hero ---------- */
-  .hero {
-    max-width: 1080px;
-    margin: 0 auto;
-    padding: 64px 24px 40px;
-  }
-
-  .kicker {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: .12em;
-    text-transform: uppercase;
-    color: var(--accent-2);
-    background: var(--accent-soft);
-    border: 1px solid #cde9e5;
-    border-radius: 999px;
-    padding: 6px 14px;
-  }
-
-  .kicker .dot {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: var(--accent);
-  }
-
-  h1 {
-    font-family: 'Space Grotesk', 'Inter', sans-serif;
-    font-size: clamp(30px, 5vw, 48px);
-    line-height: 1.12;
-    letter-spacing: -0.02em;
-    margin: 18px 0 14px;
-  }
-
-  h1 .thin { color: var(--muted); font-weight: 600; }
-
-  .lede {
-    max-width: 720px;
-    font-size: clamp(15.5px, 2vw, 17.5px);
-    color: var(--muted);
-  }
-
-  .hero-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 26px;
-  }
-
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 9px;
-    font-size: 14.5px;
-    font-weight: 600;
-    padding: 12px 22px;
-    border-radius: 12px;
-    text-decoration: none;
-    transition: transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease;
-  }
-
-  .btn:hover { transform: translateY(-2px); }
-
-  .btn-primary {
-    color: #fff;
-    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
-    box-shadow: 0 6px 18px rgba(13, 148, 136, .28);
-  }
-
-  .btn-primary:hover { box-shadow: 0 10px 24px rgba(13, 148, 136, .34); }
-
-  .btn-ghost {
-    color: var(--ink);
-    background: #fff;
-    border: 1px solid var(--line);
-  }
-
-  .btn-ghost:hover { border-color: #c9d4dd; box-shadow: var(--shadow-sm); }
-
-  /* ---------- Screenshot frame ---------- */
-  .shot-wrap {
-    max-width: 1080px;
-    margin: 8px auto 0;
-    padding: 0 24px;
-  }
-
-  .shot {
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    background: #fff;
-    box-shadow: var(--shadow-md);
-    overflow: hidden;
-  }
-
-  .shot-bar {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-    padding: 11px 16px;
-    border-bottom: 1px solid var(--line);
-    background: #fbfcfd;
-  }
-
-  .shot-bar .d { width: 10px; height: 10px; border-radius: 50%; }
-  .shot-bar .d1 { background: #f87171; }
-  .shot-bar .d2 { background: #fbbf24; }
-  .shot-bar .d3 { background: #34d399; }
-
-  .shot-bar .url {
-    margin-left: 10px;
-    font-size: 12px;
-    color: var(--muted);
-    background: #f1f4f6;
-    border-radius: 7px;
-    padding: 4px 12px;
-    display: inline-block;
-  }
-
-  .shot img { display: block; width: 100%; height: auto; }
-
-  /* ---------- Sections ---------- */
-  .section { max-width: 1080px; margin: 0 auto; padding: 56px 24px 0; }
-
-  .section-title {
-    font-family: 'Space Grotesk', 'Inter', sans-serif;
-    font-size: clamp(20px, 3vw, 26px);
-    letter-spacing: -0.01em;
-    margin-bottom: 6px;
-  }
-
-  .section-sub { color: var(--muted); font-size: 15px; margin-bottom: 26px; }
-
-  /* ---------- Feature grid ---------- */
-  .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
-
-  .card {
-    background: var(--surface);
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    padding: 22px 20px;
-    box-shadow: var(--shadow-sm);
-    transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
-  }
-
-  .card:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-md);
-    border-color: #d5e6e3;
-  }
-
-  .card .num {
-    font-family: 'Space Grotesk', 'Inter', sans-serif;
-    font-size: 12px;
-    font-weight: 700;
-    color: var(--accent);
-    letter-spacing: .1em;
-  }
-
-  .card h3 {
-    font-size: 16px;
-    font-weight: 700;
-    margin: 10px 0 8px;
-    letter-spacing: -0.01em;
-  }
-
-  .card p { font-size: 13.5px; color: var(--muted); }
-
-  /* ---------- Architecture ---------- */
-  .arch { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-
-  .panel {
-    background: var(--surface);
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    padding: 26px;
-    box-shadow: var(--shadow-sm);
-  }
-
-  .panel h3 {
-    font-size: 16px;
-    font-weight: 700;
-    margin-bottom: 16px;
-    display: flex;
-    align-items: center;
-    gap: 9px;
-  }
-
-  .panel ul { list-style: none; display: grid; gap: 11px; }
-
-  .panel li {
-    position: relative;
-    padding-left: 20px;
-    font-size: 14px;
-    color: #33414d;
-  }
-
-  .panel li::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: .58em;
-    width: 8px;
-    height: 8px;
-    border-radius: 2px;
-    background: var(--accent);
-    opacity: .55;
-  }
-
-  .panel li b { color: var(--ink); }
-
-  /* ---------- Tech stack ---------- */
-  .stack {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 9px;
-  }
-
-  .chip {
-    font-size: 13px;
-    font-weight: 600;
-    color: #24333f;
-    background: #fff;
-    border: 1px solid var(--line);
-    border-radius: 999px;
-    padding: 7px 14px;
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-    transition: border-color .15s ease, color .15s ease;
-  }
-
-  .chip:hover { border-color: var(--accent); color: var(--accent-2); }
-
-  .chip .c { width: 8px; height: 8px; border-radius: 50%; }
-
-  /* ---------- Highlights ---------- */
-  .highlights {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
-  }
-
-  .hl {
-    background: var(--surface);
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    padding: 22px;
-    box-shadow: var(--shadow-sm);
-  }
-
-  .hl .big {
-    font-family: 'Space Grotesk', 'Inter', sans-serif;
-    font-size: 26px;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-  }
-
-  .hl .lbl { font-size: 13px; color: var(--muted); margin-top: 2px; }
-
-  /* ---------- CTA / footer ---------- */
-  .cta {
-    max-width: 1080px;
-    margin: 64px auto 0;
-    padding: 0 24px 28px;
-  }
-
-  .cta-box {
-    background: linear-gradient(135deg, #0f766e 0%, #115e59 55%, #134e4a 100%);
-    border-radius: 20px;
-    padding: clamp(28px, 5vw, 48px);
-    color: #eefbf9;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-    flex-wrap: wrap;
-  }
-
-  .cta-box h2 {
-    font-family: 'Space Grotesk', 'Inter', sans-serif;
-    font-size: clamp(20px, 3vw, 28px);
-    letter-spacing: -0.01em;
-  }
-
-  .cta-box p { margin-top: 8px; color: #b8e5de; font-size: 15px; max-width: 560px; }
-
-  .cta-box .btn { background: #fff; color: #0f766e; }
-  .cta-box .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,.25); }
-
-  .cta-actions { display: flex; gap: 12px; flex-wrap: wrap; }
-
-  footer {
-    max-width: 1080px;
-    margin: 0 auto;
-    padding: 26px 24px 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 14px;
-    flex-wrap: wrap;
-    border-top: 1px solid var(--line);
-    font-size: 13px;
-    color: var(--muted);
-  }
-
-  footer a { color: var(--accent-2); font-weight: 600; text-decoration: none; }
-  footer a:hover { text-decoration: underline; }
-
-  /* ---------- Responsive ---------- */
-  @media (max-width: 900px) {
-    .grid { grid-template-columns: repeat(2, 1fr); }
-    .arch { grid-template-columns: 1fr; }
-    .highlights { grid-template-columns: 1fr; }
-  }
-
-  @media (max-width: 560px) {
-    .grid { grid-template-columns: 1fr; }
-    .topbar-inner { padding: 12px 16px; }
-    .hero { padding: 44px 16px 32px; }
-    .shot-wrap, .section, .cta, footer { padding-left: 16px; padding-right: 16px; }
-    .brand span { display: none; }      /* hide brand text, keep mark */
-    .back-link { font-size: 12.5px; padding: 7px 12px; }
-    .lang-toggle button { padding: 7px 10px; font-size: 11.5px; }
-    .shot-bar .url { max-width: 55vw; overflow: hidden; text-overflow: ellipsis; }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    * { transition: none !important; scroll-behavior: auto; }
-  }
-</style>
+<link rel="stylesheet" href="src/css/style.css" />
 </head>
 <body>
 
@@ -529,15 +66,15 @@
     </div>
   </section>
 
-  <!-- Screenshot -->
+  <!-- Screenshot utama -->
   <div class="shot-wrap">
-    <figure class="shot">
+    <figure class="shot" data-lightbox>
       <div class="shot-bar">
         <span class="d d1"></span><span class="d d2"></span><span class="d d3"></span>
         <span class="url">dhcip.my.id</span>
       </div>
-      <img src="dhcip-screenshot.png" alt="Tampilan antarmuka DHCIP — Damri Human Capital Intelligence Platform" loading="lazy"
-           onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/WaskithoCitoAdiwiguno/WaskithoCitoAdiwiguno/main/assets/dhcip-screenshot.png'" />
+      <img src="src/img/dashboard-utama.png" alt="Tampilan antarmuka DHCIP — Damri Human Capital Intelligence Platform" data-full="src/img/dashboard-utama.png" />
+      <figcaption data-i18n="capHero" style="display:none">Dashboard Utama — ringkasan KPI perusahaan</figcaption>
     </figure>
   </div>
 
@@ -567,6 +104,23 @@
         <p data-i18n="card4Body">Rekomendasi perbaikan otomatis berbasis Gemini Flash 2.5, disusun dari data kinerja tiap karyawan.</p>
       </article>
     </div>
+  </section>
+
+  <!-- Galeri slider -->
+  <section class="section" id="gallery">
+    <h2 class="section-title" data-i18n="galleryTitle">Tangkapan Layar</h2>
+    <p class="section-sub" data-i18n="gallerySub">Geser otomatis setiap 10 detik — klik gambar untuk melihat lebih detail.</p>
+    <div class="slider" id="slider">
+      <div class="slides" id="slides"><!-- slides injected by main.js --></div>
+      <button class="slider-nav prev" id="slide-prev" type="button" aria-label="Sebelumnya / Previous">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <button class="slider-nav next" id="slide-next" type="button" aria-label="Berikutnya / Next">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+      <div class="slider-progress" aria-hidden="true"><span id="slide-progress-bar"></span></div>
+    </div>
+    <div class="slider-dots" id="slide-dots" role="tablist" aria-label="Slide"></div>
   </section>
 
   <!-- Arsitektur & highlight -->
@@ -611,11 +165,10 @@
     <p class="section-sub" data-i18n="techSub">Stack yang menopang seluruh platform.</p>
     <div class="stack">
       <span class="chip"><span class="c" style="background:#3178c6"></span>JavaScript / TypeScript</span>
-      <span class="chip"><span class="c" style="background:#00add8"></span>Golang</span>
       <span class="chip"><span class="c" style="background:#777bb4"></span>PHP</span>
       <span class="chip"><span class="c" style="background:#ee4323"></span>CodeIgniter</span>
       <span class="chip"><span class="c" style="background:#8e75b2"></span>Gemini API</span>
-      <span class="chip"><span class="c" style="background:#00758f"></span>MySQL</span>
+      <span class="chip"><span class="c" style="background:#8f4000"></span>DBeaver</span>
     </div>
   </section>
 
@@ -654,120 +207,19 @@
   </section>
 </main>
 
+<!-- Lightbox -->
+<figure class="lightbox" id="lightbox" aria-hidden="true">
+  <img id="lightbox-img" src="" alt="" />
+  <figcaption id="lightbox-cap"></figcaption>
+</figure>
+<button class="lightbox-close" id="lightbox-close" type="button" aria-label="Tutup / Close">✕</button>
+
 <footer>
   <span>© 2026 Waskitho Cito Adiwiguno — DHCIP</span>
   <span><a href="https://dhcip.my.id/" target="_blank" rel="noopener noreferrer">dhcip.my.id</a> · <a href="https://github.com/WaskithoCitoAdiwiguno" target="_blank" rel="noopener noreferrer">GitHub</a></span>
 </footer>
 
-<script>
-(function () {
-  'use strict';
-
-  var i18n = {
-    id: {
-      back: 'Kembali ke Profil',
-      kicker: 'Proyek Unggulan · Web Dashboard',
-      lede: 'Sistem dashboard web untuk memantau performa karyawan DAMRI secara menyeluruh — dari ringkasan KPI perusahaan, detail penilaian tiap individu, pemetaan talenta lewat Nine Box Matrix, hingga rekomendasi perbaikan otomatis berbasis AI.',
-      btnGithub: 'GitHub Profil',
-      modulesTitle: 'Empat Modul Utama',
-      modulesSub: 'Semua aspek manajemen kinerja karyawan DAMRI dalam satu platform terintegrasi.',
-      card1Body: 'Ringkasan KPI seluruh karyawan dalam satu tampilan — agregasi performa lintas unit kerja secara real-time.',
-      card2Body: 'Profil kinerja individual: KPI, akhlak, kehadiran, dan penilaian 360° dari rekan, atasan, serta bawahan.',
-      card3Body: 'Pemetaan performa dan potensi pada tiga level: karyawan, leader, divisi, hingga direktorat.',
-      card4Body: 'Rekomendasi perbaikan otomatis berbasis Gemini Flash 2.5, disusun dari data kinerja tiap karyawan.',
-      archTitle: 'Arsitektur &amp; Cakupan Data',
-      archSub: 'Dibangun sebagai aplikasi web multi-layer dengan penilaian multi-sumber.',
-      sysTitle: 'Struktur Sistem',
-      sys1: '<b>Frontend</b> — antarmuka dashboard interaktif (JavaScript / TypeScript)',
-      sys2: '<b>Backend</b> — layanan aplikasi Golang &amp; PHP (CodeIgniter)',
-      sys3: '<b>Database</b> — MySQL untuk data karyawan, penilaian, dan histori KPI',
-      sys4: '<b>Layanan AI</b> — integrasi Gemini API untuk analisis dan rekomendasi',
-      aspTitle: 'Aspek Penilaian',
-      asp1: '<b>KPI</b> — indikator kinerja utama per periode penilaian',
-      asp2: '<b>Akhlak</b> — dimensi sikap dan perilaku kerja',
-      asp3: '<b>Kehadiran</b> — rekam disiplin kehadiran karyawan',
-      asp4: '<b>Penilaian 360°</b> — umpan balik dari rekan, atasan, dan bawahan',
-      techTitle: 'Teknologi yang Digunakan',
-      techSub: 'Stack yang menopang seluruh platform.',
-      glanceTitle: 'Sekilas',
-      glanceSub: 'Poin-poin yang membuat DHCIP bermanfaat bagi manajemen.',
-      hl1Big: '4 Modul',
-      hl2Lbl: 'Penilaian multi-sumber: rekan, atasan, dan bawahan',
-      hl3Lbl: 'Rekomendasi perbaikan otomatis via Gemini Flash 2.5',
-      ctaTitle: 'Lihat Platform Secara Langsung',
-      ctaSub: 'Seluruh modul DHCIP dapat diakses melalui deployment resmi di dhcip.my.id.',
-      ctaBtn1: 'Buka dhcip.my.id ↗',
-      ctaBtn2: 'Profil GitHub ↗'
-    },
-    en: {
-      back: 'Back to Profile',
-      kicker: 'Featured Project · Web Dashboard',
-      lede: 'A web dashboard system for monitoring DAMRI employee performance end to end — from company-wide KPI summaries and individual assessment details, to talent mapping via the Nine Box Matrix and automated AI-powered improvement recommendations.',
-      btnGithub: 'GitHub Profile',
-      modulesTitle: 'Four Core Modules',
-      modulesSub: 'Every aspect of DAMRI employee performance management in one integrated platform.',
-      card1Body: 'Company-wide KPI summary in a single view — real-time performance aggregation across work units.',
-      card2Body: 'Individual performance profile: KPI, work attitude (akhlak), attendance, and 360° feedback from peers, managers, and subordinates.',
-      card3Body: 'Performance and potential mapping across three levels: employee, leader, division, up to directorate.',
-      card4Body: 'Automated improvement recommendations powered by Gemini Flash 2.5, built from each employee\u2019s performance data.',
-      archTitle: 'Architecture &amp; Data Scope',
-      archSub: 'Built as a multi-layer web application with multi-source assessments.',
-      sysTitle: 'System Structure',
-      sys1: '<b>Frontend</b> — interactive dashboard interface (JavaScript / TypeScript)',
-      sys2: '<b>Backend</b> — application services in Golang &amp; PHP (CodeIgniter)',
-      sys3: '<b>Database</b> — MySQL for employee data, assessments, and KPI history',
-      sys4: '<b>AI Services</b> — Gemini API integration for analysis and recommendations',
-      aspTitle: 'Assessment Aspects',
-      asp1: '<b>KPI</b> — key performance indicators per assessment period',
-      asp2: '<b>Akhlak</b> — work attitude and behavioral dimensions',
-      asp3: '<b>Attendance</b> — employee attendance discipline records',
-      asp4: '<b>360° Assessment</b> — feedback from peers, managers, and subordinates',
-      techTitle: 'Technologies Used',
-      techSub: 'The stack powering the entire platform.',
-      glanceTitle: 'At a Glance',
-      glanceSub: 'What makes DHCIP valuable for management.',
-      hl1Big: '4 Modules',
-      hl2Lbl: 'Multi-source assessment: peers, managers, and subordinates',
-      hl3Lbl: 'Automated improvement recommendations via Gemini Flash 2.5',
-      ctaTitle: 'See the Platform Live',
-      ctaSub: 'All DHCIP modules are accessible through the official deployment at dhcip.my.id.',
-      ctaBtn1: 'Open dhcip.my.id ↗',
-      ctaBtn2: 'GitHub Profile ↗'
-    }
-  };
-
-  var STORE_KEY = 'dhcip-lang';
-
-  function setLang(lang) {
-    var dict = i18n[lang] || i18n.id;
-    document.documentElement.lang = lang;
-
-    var nodes = document.querySelectorAll('[data-i18n]');
-    for (var i = 0; i < nodes.length; i++) {
-      var key = nodes[i].getAttribute('data-i18n');
-      if (dict[key] !== undefined) nodes[i].innerHTML = dict[key];
-    }
-
-    var buttons = document.querySelectorAll('.lang-toggle button');
-    for (var j = 0; j < buttons.length; j++) {
-      buttons[j].classList.toggle('active', buttons[j].getAttribute('data-lang') === lang);
-    }
-
-    try { localStorage.setItem(STORE_KEY, lang); } catch (e) { /* private mode */ }
-  }
-
-  var toggle = document.querySelectorAll('.lang-toggle button');
-  for (var k = 0; k < toggle.length; k++) {
-    toggle[k].addEventListener('click', function () {
-      setLang(this.getAttribute('data-lang'));
-    });
-  }
-
-  var saved = 'id';
-  try { saved = localStorage.getItem(STORE_KEY) || 'id'; } catch (e) { /* private mode */ }
-  setLang(saved);
-})();
-</script>
+<script src="src/js/main.js"></script>
 
 </body>
 </html>
