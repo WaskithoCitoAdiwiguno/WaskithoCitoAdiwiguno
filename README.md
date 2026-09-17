@@ -4,7 +4,7 @@
 
 <!-- Typing animation -->
 <a href="https://github.com/WaskithoCitoAdiwiguno">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=600&lines=Hi%2C+I%27m+Waskitho+%F0%9F%91%8B;D4+Informatics+%40+ULBI;ML+%2B+Explainable+AI+Enthusiast;Still+learning+but+getting+better." alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=420&lines=Hi%2C+I%27m+Waskitho+%F0%9F%91%8B;D4+Informatics+%40+ULBI;ML+%2B+Explainable+AI+Enthusiast;Still+learning+but+getting+better." alt="Typing SVG" />
 </a>
 
 <br/>
@@ -61,44 +61,29 @@
 
 ## 🚀 Featured Projects
 
-<table>
-<tr>
-<td width="50%" valign="top">
-
 ### 📈 ASM_AntonSahamManager
+
 Modular AI-based stock trading simulation system with 6 modules: data layer (SQLite + yfinance), technical indicators (RSI/MACD/Bollinger/ATR), rule-based signal engine, ATR-based risk manager, paper trading simulator, and a Streamlit dashboard. Target markets: IDX, US stocks, and crypto.
 
 `Python` `Streamlit` `yfinance` `TA-Lib`
 
-</td>
-<td width="50%" valign="top">
-
 ### 🧠 Explainable HR Intelligence
+
 Employee attrition prediction & prescription framework combining **SHAP** for explainability and an **LLM (Llama 3.3-70B via Groq)** for automated HR narratives. Percentile-based risk tiering, model calibration to counter overconfidence bias.
 
 `Python` `SHAP` `Scikit-learn` `Groq API` `Streamlit`
 
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
 ### ⌨️ A-Ton Keyboard Clicker
+
 Keyboard auto-clicker for Windows with a semi-transparent, always-on-top dark overlay. Uses hardware-level `SendInput` via ctypes for high compatibility (including fullscreen games), packaged as an executable with PyInstaller.
 
 `Python` `Tkinter` `ctypes`
 
-</td>
-<td width="50%" valign="top">
+### 🏢 DHCIP — Damri Human Capital Intelligence Platform
 
-### 🏢 [DHCIP — Damri Human Capital Intelligence Platform](https://waskithocitoadiwiguno.github.io/details.DHCIP/index.html)
 Web dashboard system for monitoring DAMRI employee performance, with 4 core modules: **Dashboard** (company-wide KPI summary), **Employee Details** (KPI, work attitude, attendance, 360° assessment), **Nine Box Matrix** (performance mapping across leader/division/directorate), and **AI Recommendation** (automated improvement suggestions via Gemini Flash 2.5). Live at [dhcip.my.id](https://dhcip.my.id/) · [Project Detail Page →](https://waskithocitoadiwiguno.github.io/details.DHCIP/index.html)
 
 `JavaScript / TypeScript` `golang` `PHP` `CI` `Gemini API` `MySQL`
-
-</td>
-</tr>
-</table>
 
 <br/>
 
@@ -145,13 +130,15 @@ Web dashboard system for monitoring DAMRI employee performance, with 4 core modu
 
 <div align="center">
 
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=WaskithoCitoAdiwiguno&theme=tokyonight" alt="Profile Details" width="32.5%"/>
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=WaskithoCitoAdiwiguno&theme=tokyonight" alt="GitHub Stats" width="32.5%"/>
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=WaskithoCitoAdiwiguno&theme=tokyonight&utc_offset=7" alt="Productive Time" width="32.5%"/>
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=WaskithoCitoAdiwiguno&theme=tokyonight" alt="Profile Details" width="100%"/>
 <br/>
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=WaskithoCitoAdiwiguno&theme=tokyonight" alt="Repos per Language" width="32.5%"/>
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=WaskithoCitoAdiwiguno&theme=tokyonight" alt="Most Commit Language" width="32.5%"/>
-<img src="https://streak-stats.demolab.com?user=WaskithoCitoAdiwiguno&theme=tokyonight&hide_border=true&locale=en" alt="GitHub Streak" width="32.5%"/>
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=WaskithoCitoAdiwiguno&theme=tokyonight" alt="GitHub Stats" width="48%"/>
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=WaskithoCitoAdiwiguno&theme=tokyonight&utc_offset=7" alt="Productive Time" width="48%"/>
+<br/>
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=WaskithoCitoAdiwiguno&theme=tokyonight" alt="Repos per Language" width="48%"/>
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=WaskithoCitoAdiwiguno&theme=tokyonight" alt="Most Commit Language" width="48%"/>
+<br/>
+<img src="https://streak-stats.demolab.com?user=WaskithoCitoAdiwiguno&theme=tokyonight&hide_border=true&locale=en" alt="GitHub Streak"/>
 
 </div>
 
@@ -179,7 +166,7 @@ Web dashboard system for monitoring DAMRI employee performance, with 4 core modu
 
 <div align="center">
 
-<img src="https://github-trophies.vercel.app/?username=WaskithoCitoAdiwiguno&row=1&column=6&no-frame=true&theme=tokyonight" alt="trophy" />
+<img src="https://github-trophies.vercel.app/?username=WaskithoCitoAdiwiguno&row=2&column=3&no-frame=true&theme=tokyonight" alt="trophy" />
 
 </div>
 
