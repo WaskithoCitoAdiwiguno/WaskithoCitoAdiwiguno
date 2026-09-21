@@ -59,27 +59,27 @@
 
 </div>
 
-## 🚀 Featured Projects
+## Featured Projects
 
-### 📈 ASM_AntonSahamManager
+### ASM_AntonSahamManager
 
 Modular AI-based stock trading simulation system with 6 modules: data layer (SQLite + yfinance), technical indicators (RSI/MACD/Bollinger/ATR), rule-based signal engine, ATR-based risk manager, paper trading simulator, and a Streamlit dashboard. Target markets: IDX, US stocks, and crypto.
 
 `Python` `Streamlit` `yfinance` `TA-Lib`
 
-### 🧠 Explainable HR Intelligence
+### EXPLAINABLE HUMAN CAPITAL INTELLIGENCE FRAMEWORK 
 
 AI Employee Attrition Detector — memprediksi risiko resign karyawan sekaligus menjelaskannya: **10 model diadu** (Logistic Regression menang: ROC-AUC 0.799, Recall 0.596), **SHAP waterfall** per karyawan, dan **LLM via Groq** yang menerjemahkan angka SHAP menjadi ringkasan & rekomendasi HR. Risk tiering: Rendah <30% / Sedang 30–60% / Tinggi >60%. · [📄 Project Detail Page →](https://waskithocitoadiwiguno.github.io/details.ExplainableHRIntelligence/)
 
 `Python` `SHAP` `Scikit-learn` `Groq API` `Gradio`
 
-### ⌨️ A-Ton Keyboard Clicker
+###  UtangKu
 
-Keyboard auto-clicker for Windows with a semi-transparent, always-on-top dark overlay. Uses hardware-level `SendInput` via ctypes for high compatibility (including fullscreen games), packaged as an executable with PyInstaller.
+App that helps user monitoring "WHO" of all the people who borrow a money from user, with an alarm setup, if user fill the phone number of the people who borrow money from him and set the deadline, the system will remind those person when the deadline of payment is up.
 
 `Python` `Tkinter` `ctypes`
 
-### 🏢 DHCIP — Damri Human Capital Intelligence Platform
+### DHCIP — Damri Human Capital Intelligence Platform
 
 Web dashboard system for monitoring DAMRI employee performance, with 4 core modules: **Dashboard** (company-wide KPI summary), **Employee Details** (KPI, work attitude, attendance, 360° assessment), **Nine Box Matrix** (performance mapping across leader/division/directorate), and **AI Recommendation** (automated improvement suggestions via Gemini Flash 2.5). Live at [dhcip.my.id](https://dhcip.my.id/) · [Project Detail Page →](https://waskithocitoadiwiguno.github.io/details.DHCIP/index.html)
 
