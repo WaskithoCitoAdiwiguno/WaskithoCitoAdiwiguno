@@ -17,9 +17,9 @@
 
 ## 👨‍💻 About Me
 
-- 🎓 D4 Informatics student, **Universitas Logistik dan Bisnis Internasional (ULBI)** — School of Information Technology
+- 🎓 D4 Informatics student, **Universitas Logistik dan Bisnis Internasional (ULBI)**, School of Information Technology
 - 🔬 Research focus: **Explainable AI** (SHAP), **Fairness in ML** (AIF360), and **LLM** integration for HR analytics
-- 🛠️ Building practical Python tools — data pipelines, desktop apps, simulation systems
+- 🛠️ Building practical Python tools: data pipelines, desktop apps, and simulation systems
 - 📄 Actively publishing in the **SINTA** journal ecosystem (Indonesia)
 - 💼 Working on academic research, freelance data work, and applied ML development
 - 📫 Open to collaboration on ML/AI, data science, and automation
@@ -67,9 +67,9 @@ Modular AI-based stock trading simulation system with 6 modules: data layer (SQL
 
 `Python` `Streamlit` `yfinance` `TA-Lib`
 
-### EXPLAINABLE HUMAN CAPITAL INTELLIGENCE FRAMEWORK 
+### EXPLAINABLE HUMAN CAPITAL INTELLIGENCE FRAMEWORK
 
-AI Employee Attrition Detector — memprediksi risiko resign karyawan sekaligus menjelaskannya: **10 model diadu** (Logistic Regression menang: ROC-AUC 0.799, Recall 0.596), **SHAP waterfall** per karyawan, dan **LLM via Groq** yang menerjemahkan angka SHAP menjadi ringkasan & rekomendasi HR. Risk tiering: Rendah <30% / Sedang 30–60% / Tinggi >60%. · [📄 Project Detail Page →](https://waskithocitoadiwiguno.github.io/details.ExplainableHRIntelligence/)
+AI Employee Attrition Detector — predicts employee attrition risk and explains it: **10 models competed** (Logistic Regression won: ROC-AUC 0.799, Recall 0.596), **Platt-calibrated probabilities** (Brier 0.1578 → 0.1049), **per-employee SHAP waterfall**, and an **LLM (Llama 3.3 via Groq)** that turns SHAP numbers into tier-matched HR narratives, plus a **what-if simulation** for prescriptive analytics. · [📄 Project Detail Page →](https://waskithocitoadiwiguno.github.io/details.ExplainableHRIntelligence/) · [🔗 Repo →](https://github.com/WaskithoCitoAdiwiguno/details.ExplainableHRIntelligence)
 
 `Python` `SHAP` `Scikit-learn` `Groq API` `Gradio`
 
@@ -116,8 +116,9 @@ Web dashboard system for monitoring DAMRI employee performance, with 4 core modu
 
 ### Books
 
-3. **Pengenalan Golang dan Membuat Package**
-   - 📖 Published via: Penerbit Buku Pedia (available on Google Books) — July 2023, 104 pages
+1. **Pengenalan Golang dan Membuat Package**
+   - 📖 Published via: Penerbit Buku Pedia (available on Google Books), July 2023, 104 pages
+   -  This book was made to 
    - 🔗 [Link to book](https://books.google.co.id/books?id=HNzLEAAAQBAJ)
    - 👥 Co-authors: Muhammad Wildan Khalilurrahman, Rolly Maulana Awangga
 
